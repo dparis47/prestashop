@@ -11,8 +11,8 @@ public class VirtualAuthenticatorPOM extends Pom {
 
 
 	@Step("Check InWebo activating profile")
-	public void activationCode(String expectedProfile) {
-		assertEquals(expectedProfile, getUI().getText(Bindings.VIRTUAL_AUTHENTIFICATION_PROFILE, null), "Check InWebo activating profile");
+	public void checkProfile(String expectedProfile) {
+		assertEquals(expectedProfile, getUI().getInputFieldValue(Bindings.VIRTUAL_AUTHENTIFICATION_PROFILE, null), "Check InWebo activating profile");
 	}
 	
 	@Step("Check Activation code error message")
@@ -23,7 +23,8 @@ public class VirtualAuthenticatorPOM extends Pom {
 	
 	@Step("Check browser name is not empty")
 	public void checkBrowserName() {
-		String browser = getUI().getText(Bindings.VIRTUAL_AUTHENTIFICATION_BROWSER, null);
+		//depends on the OS
+		String browser = getUI().getInputFieldValue(Bindings.VIRTUAL_AUTHENTIFICATION_BROWSER, null);
 		assertTrue( browser!=null && !browser.isEmpty(), "Check InWebo activating profile");
 	}
 	
@@ -42,7 +43,7 @@ public class VirtualAuthenticatorPOM extends Pom {
 	
 	@Step("Check Sign button is present")
 	public void checkSignButton() {
-		assertTrue(getUI().isPresent(Bindings.INWEBO_USER_BROWSER_BUTTON, null), "'Sign me in safely to my Secure Sites' button is present");
+		assertTrue(getUI().isPresent(Bindings.INWEBO_USER_BROWSER_BUTTON, null), "Sign me in safely to my Secure Sites button is present");
 	}
 
 	

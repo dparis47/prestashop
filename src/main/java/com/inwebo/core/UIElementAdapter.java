@@ -166,6 +166,22 @@ public class UIElementAdapter {
     
     /**
      * 
+     * @param b
+     * @param args
+     * @return
+     */
+    public String getInputFieldValue(Bindings b, String... args) {
+        try {
+            Elt e = getXR(b, args);
+            UIField f = e.getUiField();
+            return (f != null ? f.getValue(e) : null);
+        } catch(Exception ex) {
+            return null;
+        }
+    }
+    
+    /**
+     * 
      * @param by
      * @return
      */

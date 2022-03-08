@@ -27,7 +27,11 @@ public class UIFieldText extends UIField{
 
 	@Override
 	public String getValue(Elt e) {
-		// TODO Auto-generated method stub
-		return null;
+        try {
+            String value = findElement(e.getBy()).getAttribute("value");
+            return value;
+        } catch(Exception ex) {
+            return null;
+        }
 	}
 }

@@ -17,7 +17,7 @@ public enum Bindings implements Binding {
   VIRTUAL_AUTHENTIFICATION_PWD("passwd", QueryTypes.ID, UIFieldType.TEXT), //
   VIRTUAL_AUTHENTIFICATION_VALIDATION_BUTTON("confirmPin", QueryTypes.ID, UIFieldType.TEXT), //
   
-  INWEBO_USER_BROWSER_BUTTON(".heliumNextButton>a", QueryTypes.ID, UIFieldType.TEXT), //
+  INWEBO_USER_BROWSER_BUTTON(".heliumNextButton>a", QueryTypes.CSS, UIFieldType.TEXT), //
   
   ;
 

@@ -61,20 +61,20 @@ public class InweboTest extends TestSuite {
 	@Feature("enrolment and authentication")
 	public void test003ActivationCode() {
 
-		activation.activationCode("6842354046");
+		activation.activationCode("172594713");
 		activation.switchToDefaultFrame();
 	}
 	
 	@Test
 	@TmsLink("1234") 
-	@Description("InWebo activation code success")
-	@DisplayName("InWebo activation code success")
+	@Description("InWebo virtual authenticator")
+	@DisplayName("InWebo virtual authenticator")
 	@Feature("enrolment and authentication")
 	public void test004ActivationCode() {
 
 		virtualAuthenticator.switchToIFrame();
 		
-		virtualAuthenticator.activationCode("david paris");
+		virtualAuthenticator.checkProfile("david paris");
 		virtualAuthenticator.checkBrowserName();
 		virtualAuthenticator.inputPIN();
 		virtualAuthenticator.clickOnValidateButton();
@@ -85,8 +85,8 @@ public class InweboTest extends TestSuite {
 	
 	@Test
 	@TmsLink("1234") 
-	@Description("InWebo activation code success")
-	@DisplayName("InWebo activation code success")
+	@Description("InWebo virtual authenticator success")
+	@DisplayName("InWebo virtual authenticator success")
 	@Feature("enrolment and authentication")
 	public void test005TrustedDevice() {
 		

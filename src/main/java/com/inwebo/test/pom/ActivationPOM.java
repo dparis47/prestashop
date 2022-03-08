@@ -13,7 +13,7 @@ public class ActivationPOM extends Pom {
 	@Step("Input activation code")
 	public void activationCode(String code) {
 		switchToIFrame();
-		boolean result = getUI().input("286531529", Bindings.INWEBO_ACTIVATION_CODE_INPUT, null);
+		boolean result = getUI().input(code, Bindings.INWEBO_ACTIVATION_CODE_INPUT, null);
 		assertTrue(result, "Input InWebo activation code");
 
 		assertTrue(getUI().click(Bindings.INWEBO_ACTIVATION_CODE_BUTTON, null), "Click on InWebo activation code Validation button");

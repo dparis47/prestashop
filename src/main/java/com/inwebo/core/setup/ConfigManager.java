@@ -128,9 +128,9 @@ public class ConfigManager {
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-infobars");
 		
-		if(getConfig().isPrivateBrowsing()) {
-			options.addArguments("--incognito");
-		}
+//		if(getConfig().isPrivateBrowsing()) {
+//			options.addArguments("--incognito");
+//		}
 
 		return options;
 	}
@@ -143,9 +143,9 @@ public class ConfigManager {
 		FirefoxOptions options = new FirefoxOptions();
 		FirefoxProfile profile = new FirefoxProfile();
 		profile.setPreference("intl.accept_languages", "en-GB");
-		if(getConfig().isPrivateBrowsing()) {
-			profile.setPreference("browser.privatebrowsing.autostart", true); 
-		}
+//		if(getConfig().isPrivateBrowsing()) {
+//			profile.setPreference("browser.privatebrowsing.autostart", true); 
+//		}
 		options.setProfile(profile);
 		return options;
 	}
