@@ -3,11 +3,9 @@
 * Maven: 3.3.9 or higher
 
 ## Execution
-Before launching the test: modify the activation code InweboTest.test003ActivationCode() and the profile InweboTest.test004ActivationCode()
-
-* Testcase can be launched as a JUnit test.
+* Testcase can be launched as a JUnit test with -Dconfig=path/to/config/config.json VM arguments.
 * Test can be launched with ```mvn test -Dconfig=path/to/config/config.json```.
-* A default config file is present in com.inwebo.data.config-sample.json
+* A default config file is present in com.prestashop.data.config-sample.json
 - timeout : maximum wait time before trying to perform action on element (error is returned if element never appears)
 - isGrid : if true, selenium grid is used to execute test, if false, test is executed locally
 - browser: CHROME or FIREFOX

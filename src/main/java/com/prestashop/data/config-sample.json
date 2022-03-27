@@ -1,0 +1,7 @@
+{
+"timeout":10,
+"grid":false,
+"gridServer":"http://localhost:4444/wd/hub",
+"browser":"CHROME",
+"screenshot":"NONE"
+}
