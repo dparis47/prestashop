@@ -3,3 +3,4 @@
 /selenium.log
 *.class
 /allure-result/
+/.settings
